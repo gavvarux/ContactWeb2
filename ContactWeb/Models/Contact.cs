@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ContactWeb.Models
 {
-    public class ContactWeb
+    public class Contact
     {
         public int Id { get; set; }
         public Guid UserId { get; set; }
