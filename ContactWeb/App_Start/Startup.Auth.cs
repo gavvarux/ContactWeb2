@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using ContactWeb.Models;
+using System.Configuration;
 
 namespace ContactWeb
 {
@@ -54,12 +55,13 @@ namespace ContactWeb
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: ConfigurationManager.AppSettings["appId"],//"191233024963316",
+               appSecret: ConfigurationManager.AppSettings["appSecret"]);//"4ee6c3a54d5cb2a6bae668cebded19e7");
+
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
+            
             //    ClientId = "",
             //    ClientSecret = ""
             //});
